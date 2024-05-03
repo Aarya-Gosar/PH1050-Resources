@@ -1,0 +1,416 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     20312,        408]
+NotebookOptionsPosition[     18074,        356]
+NotebookOutlinePosition[     18931,        384]
+CellTagsIndexPosition[     18888,        381]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["End Semester Examination\nPH1050 Foundations of \
+Computational Physics\nDate: November 24, 2023                  Time: 2:00 to \
+5:15 pm                           Maximum Marks:  40                         ",
+ FontSize->18,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.902660294012339*^9, 3.902660340268341*^9}, 
+   3.90266050426537*^9, {3.902661624081382*^9, 3.9026617425226173`*^9}, {
+   3.9026617942672987`*^9, 3.9026618165178328`*^9}, {3.9026618646529512`*^9, 
+   3.9026618717676077`*^9}, {3.9026619479819927`*^9, 3.902662027247834*^9}, {
+   3.9026622898685093`*^9, 3.902662292339713*^9}, 3.902662353316881*^9, {
+   3.902662387102285*^9, 3.9026625871829348`*^9}, {3.902665667582101*^9, 
+   3.902665686253454*^9}, {3.902740190874868*^9, 3.90274019445092*^9}, {
+   3.902961752612314*^9, 3.902961803693766*^9}, {3.902966200929556*^9, 
+   3.9029662092772093`*^9}, {3.903012516530526*^9, 3.9030125707533407`*^9}, {
+   3.903416888112508*^9, 3.9034168908493156`*^9}, {3.903911910911628*^9, 
+   3.9039119407862673`*^9}, {3.9059469472558126`*^9, 3.905946958241333*^9}, {
+   3.905947323573463*^9, 3.905947335925048*^9}, {3.906019695985612*^9, 
+   3.906019715402234*^9}, 3.906152377318124*^9, {3.906453617225037*^9, 
+   3.90645373131633*^9}, {3.909736983138937*^9, 3.909737109853882*^9}, {
+   3.9097371709193153`*^9, 3.909737172175366*^9}, {3.909737924813614*^9, 
+   3.9097379283013277`*^9}, {3.909738185424036*^9, 3.9097381941731663`*^9}, {
+   3.909738381179103*^9, 3.909738416997859*^9}, {3.909796794080332*^9, 
+   3.909796798728076*^9}, 3.909803563486107*^9},
+ FontWeight->"Plain",
+ CellID->859383337,ExpressionUUID->"22eab519-2e2d-4803-ab8b-1d642d0afd81"],
+
+Cell[TextData[{
+ StyleBox["Important Instructions:\n",
+  FontSize->18,
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["The hard deadline for submission is 5:15 pm. Reports submitted \
+after the deadline by email will not be evaluated.  ",
+  FontSize->18,
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["\n\nThis question paper has three parts with each having multiple \
+questions. Answer all questions.\nAnswers for each part should be written \
+separately.\nThe code for a question in a particular part should be written \
+in one cell and the evaluated result should be displayed below the cell. \n\n",
+  FontSize->18,
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Do not write all codes for a single part / all three parts \
+continuously and show the results separately. Such reports will receive a \
+penalty of 20 % of the maximum marks scored.",
+  FontSize->18,
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["\n\nThere is no need for an independent section for results. \n\
+There is no need for additional work.   \nThere is no need for elaborate \
+writeup. Just answer to the points / comments in few lines or codes ,if \
+required.  \n\nSubmit two files: Code file (.nb / .py ...)  and the Report \
+file (.pdf format). \nThe contents of .nb file and the .pdf file need not \
+differ. \nName both files with your roll number.  \n\n",
+  FontSize->18,
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Save your code/data periodically to avoid loss of data due to \
+computer related issues. ",
+  FontSize->18,
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["\n\nYou are free to use Mathematica / Matlab / Maple / Python \
+/Julia for answering.\n\nYou are free to consult non-living beings alone: \
+Class notes / Assignments / Internet / Mathematica documentation / Stack \
+exchange / Coderosette / ChatGPT, etc. Later, if you were found seeking the \
+help of a living being within / outside IITM, you will be referred to \
+disciplinary committee.  \n\n",
+  FontSize->18,
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Identical reports/codes in whole / part will be treated as \
+intentional exchange of information and will attract a penalty of 50% of the \
+total marks scored.  ",
+  FontSize->18,
+  FontColor->RGBColor[1, 0, 0]]
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.9097371973019857`*^9, 3.9097374095574083`*^9}, {
+   3.9097374697236767`*^9, 3.909737479804207*^9}, {3.909737518398056*^9, 
+   3.909737764303636*^9}, {3.909737796384865*^9, 3.909738175760168*^9}, {
+   3.909738211179804*^9, 3.909738272342001*^9}, {3.909738320188122*^9, 
+   3.909738320932576*^9}, {3.909738420501342*^9, 3.909738436973134*^9}, 
+   3.909738617026792*^9, 3.909738702653541*^9, {3.909742845985632*^9, 
+   3.909742850789021*^9}, {3.9097433840175333`*^9, 3.9097437842786818`*^9}, {
+   3.90974384299833*^9, 3.909743897126601*^9}, 3.909744585643406*^9, {
+   3.909744618654517*^9, 3.909744833125716*^9}, {3.909750598315773*^9, 
+   3.909750717126153*^9}, {3.909750760436873*^9, 3.90975081653135*^9}, 
+   3.909750854122841*^9, 3.909750922459887*^9, {3.909794223383567*^9, 
+   3.9097943185720997`*^9}, {3.90979681845522*^9, 3.909796823021742*^9}, {
+   3.909796861027026*^9, 3.909796865412056*^9}, {3.909796915952636*^9, 
+   3.909797083100491*^9}, 3.909797118378303*^9, {3.90979715127761*^9, 
+   3.909797248406919*^9}, 3.909797282041628*^9, {3.909797602662569*^9, 
+   3.909797645471627*^9}, {3.909797677351179*^9, 3.909797746474552*^9}, 
+   3.909797822311844*^9, {3.90979790713955*^9, 3.909797915123085*^9}, {
+   3.9097979846989098`*^9, 3.909797986338909*^9}, {3.909801780543145*^9, 
+   3.909801812621972*^9}, {3.909801879724988*^9, 3.9098018839084806`*^9}, {
+   3.9098019752390947`*^9, 3.909802058712105*^9}, {3.909802267127084*^9, 
+   3.909802395223613*^9}, {3.909802961253743*^9, 3.909802981601634*^9}, 
+   3.90980356715818*^9},
+ FontWeight->"Plain",
+ CellID->178287839,ExpressionUUID->"3dcff2bb-a570-41da-8909-4c68ec6436ac"],
+
+Cell[TextData[StyleBox["Part A\t\t\tMarks  = 10",
+ FontSize->18,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.909737137020492*^9, 3.909737168446595*^9}, 
+   3.909750929186283*^9},
+ FontWeight->"Plain",
+ CellID->924258673,ExpressionUUID->"c081b4a8-a360-4015-ae53-c04807c1496f"],
+
+Cell[TextData[{
+ "1. Write an efficient code to generate the first \[OpenCurlyDoubleQuote]n\
+\[CloseCurlyDoubleQuote] terms of the series, \
+{0,1,2,3,6,11,20,37,68,125,...}, given that 0,1 and 2 are the first three \
+successive terms.  Demonstrate the working of the code by computing the first \
+10 terms. \n\n2. Slightly modify the code for finding the time taken by the \
+whole code,  for computing {1,2,4,8,10,20,40,80,100,200,400,800,1000, 2000, \
+4000, 8000,... } terms of the series. Note that computing the first four \
+terms may take a few microseconds while getting, for instance, 4000 terms may \
+take several seconds.  Since the time of  computation can grow rapidly as the \
+number of terms increases,  limit the maximum time of computing to about 25 s \
+(roughly 25 s,  need not be exact). Demonstrate the working of the code by \
+forming a list consisting of the number of terms and the corresponding time \
+of computation and display the same.   \n\n3. Plot the time of computation \
+against the number of terms in the series you have computed (within about 25 \
+s). Note that the number of computed terms will depend on how efficient your \
+code is.\n\n4. Comment on the result obtained in the above step (Step 3) . \n\
+\n",
+ StyleBox["Important note: Use of parallel computing is not allowed",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->CompressedData["
+1:eJwdzU0ow3EAxvGhKKsx5XVlbTYbm9UUadOMJCSHbS1xmJfYblNsB2lJDiOU
+lzZGf7O8DGnlvSUHrS0kr0leigs5KCmG1vJ7/oenT8/py2s1a9pjGQwGlwzW
+ekyuZN57efxpOwX5wmUPtJhqzqCU2XMF90bsYUh1BqLQ1ciNZxNVU9NMaBz9
+5cOfm10RPNwMiaHX8CqFbl2E1nRhVcLrsb8yyP5gnaQSbweaaWPvYxbziUP1
+ilVYNcjxwZ1OPa3GkbcHuyud+7C36zMEH4X953B2azVdRtRXCzLheFFdNuxQ
+NwrgwPCbGDITo7TumaY7GBRZHqBX2/8ED3znz5AVNtsVRPupjbail3LA4kIj
+paD7cWswRT6xQf85O7eUqP5y8uGSLpgLb74TJTD5vS1HRVxIkgjgQZxkG2rn
+X3ah1CbLqCD6E9hZMEKVc+FOwXoZ5Kv7ShqIaQaPEta2rNRAeVpTA1RN6v3w
+0Bo4gowI5xKesI9p/wFl9NLv
+  "],
+ FontWeight->"Plain",
+ CellID->1548953722,ExpressionUUID->"a4c57ee6-0f3e-44fe-a1e3-9ba5de6849e8"],
+
+Cell[TextData[StyleBox["Part B\t\t\tMarks  = 10",
+ FontSize->18,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.909660645234321*^9, 3.909660656510972*^9}, {
+   3.909738369610639*^9, 3.9097383722813377`*^9}, 3.909750933012519*^9},
+ FontWeight->"Plain",
+ CellID->1779301797,ExpressionUUID->"845d3dae-dc24-40b2-8aa3-e726b91817ed"],
+
+Cell[TextData[{
+ "Let f(x) be an analytic (smooth) function and \[OpenCurlyDoubleQuote]h\
+\[CloseCurlyDoubleQuote] is a small value. Consider the operation defined \
+numerically as \n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["G", "N"], TraditionalForm]],ExpressionUUID->
+  "93b9697a-3762-4c1c-a6bf-e87df6613a4b"],
+ " \[Congruent] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"6", "h"}]], "[", 
+    RowBox[{
+     RowBox[{"2", 
+      RowBox[{"f", "(", 
+       RowBox[{"x", "+", "h"}], ")"}]}], " ", "+", " ", 
+     RowBox[{"3", 
+      RowBox[{"f", "(", "x", ")"}]}], " ", "-", " ", 
+     RowBox[{"6", 
+      RowBox[{"f", "(", 
+       RowBox[{"x", "-", "h"}], ")"}]}], " ", "+", " ", 
+     RowBox[{"f", "(", 
+      RowBox[{"x", "-", 
+       RowBox[{"2", "h"}]}], ")"}]}], " ", "]"}], TraditionalForm]],
+  ExpressionUUID->"60b5672b-a425-4f0b-b2e0-8495bfbb0359"],
+ " \n\n1. Choose an analytic function of your choice for f(x). Evaluate ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["G", "N"], TraditionalForm]],ExpressionUUID->
+  "3b2633f1-7358-4283-9eb1-716aec2b786f"],
+ " at x  =  ",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox["x", "i"], " "}]],ExpressionUUID->
+  "c27dc978-6989-427b-b4c4-159b95357316"],
+ " where ",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox["x", "i"], " "}]],ExpressionUUID->
+  "45380951-9a8a-42ac-957f-613307427798"],
+ "are sixty different real numbers of your choice taken from the domain of \
+f(x). You are also free to choose the value for \[OpenCurlyDoubleQuote]h\
+\[CloseCurlyDoubleQuote]. \n\n2. Use the above result to find and also \
+substantiate the mathematical operation corresponding to ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["G", "N"], TraditionalForm]],ExpressionUUID->
+  "a3f32500-7ff3-428e-96a2-1ab15c818a65"],
+ ". Denote it as G.\n\n3. Let \[Epsilon] be the error defined as   \[Epsilon] \
+ = |G(f) - ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["G", "N"], TraditionalForm]],ExpressionUUID->
+  "9dc5553d-87c6-44df-a4a0-5b47852edf24"],
+ "| at x = x0, where x0 is a real number of your choice in the domain of f(x) \
+. Essentially, \[Epsilon]  gives the absolute value of the difference between \
+the mathematical operation on f(x) and its numerical equivalent, evaluated at \
+a given point in the domain of f(x).  Find the dependence of \[Epsilon] on \
+\[OpenCurlyDoubleQuote]h\[CloseCurlyDoubleQuote] and quantify.   \n\n4. \
+Comment on the result obtained in the above step (step 3).  "
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.9097058240153923`*^9, 3.9097058500397997`*^9}, {
+   3.90970599112842*^9, 3.909706041767406*^9}, {3.909706076180214*^9, 
+   3.90970613567935*^9}, {3.909706182066457*^9, 3.90970628544499*^9}, {
+   3.9097063622642593`*^9, 3.909706402992209*^9}, {3.909706436389971*^9, 
+   3.909706589187935*^9}, {3.909706619762656*^9, 3.9097066228981047`*^9}, {
+   3.9097066842917213`*^9, 3.9097067634565287`*^9}, {3.909706817584263*^9, 
+   3.909706858366261*^9}, {3.90970693805719*^9, 3.909707012176231*^9}, {
+   3.909707044358101*^9, 3.9097071052596693`*^9}, {3.909707139716323*^9, 
+   3.9097074820128393`*^9}, {3.909707544172119*^9, 3.9097076200926733`*^9}, {
+   3.909707685061668*^9, 3.909707735056465*^9}, {3.909707766132976*^9, 
+   3.909707783101363*^9}, {3.909707855082737*^9, 3.9097079471651278`*^9}, {
+   3.9097080063769007`*^9, 3.9097082028217087`*^9}, 3.9097082580313187`*^9, 
+   3.909708367904537*^9, {3.909708403317996*^9, 3.90970841354208*^9}, {
+   3.909708466736052*^9, 3.909708480974914*^9}, {3.9097085696777487`*^9, 
+   3.909708570116454*^9}, {3.9097359007267103`*^9, 3.909735922565735*^9}, 
+   3.909735954500293*^9, {3.909736178133382*^9, 3.909736218859838*^9}, {
+   3.9097389844819803`*^9, 3.909739109064356*^9}, {3.909739142145159*^9, 
+   3.909739184581469*^9}, {3.909739215479404*^9, 3.909739294365152*^9}, {
+   3.9097393650894623`*^9, 3.909739368777186*^9}, {3.909743002830673*^9, 
+   3.909743008981915*^9}, {3.909743114574904*^9, 3.909743125430674*^9}, {
+   3.9097449143144836`*^9, 3.9097449548465652`*^9}, {3.909751391801819*^9, 
+   3.909751393425192*^9}, {3.9097938882630568`*^9, 3.909793918892551*^9}, {
+   3.909793957802897*^9, 3.909793972507716*^9}, {3.909794598620015*^9, 
+   3.909794600655381*^9}, {3.909794635167974*^9, 3.909794647470666*^9}, {
+   3.909794684198372*^9, 3.909794696878063*^9}, {3.909795803804799*^9, 
+   3.9097958710919657`*^9}, {3.909795920931628*^9, 3.9097959238588057`*^9}, {
+   3.9097959844014673`*^9, 3.9097959868425007`*^9}},
+ FontWeight->"Plain",
+ CellID->127957563,ExpressionUUID->"de1185ca-6257-416e-9cbd-3353f17b92c8"],
+
+Cell[TextData[StyleBox["Part C\t\t\tMarks  = 20",
+ FontSize->18,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.9097384612457323`*^9, 3.909738466851553*^9}, 
+   3.90975093653087*^9},
+ FontWeight->"Plain",
+ CellID->429202065,ExpressionUUID->"9b1f92d6-aef8-4a45-9979-3c14df351017"],
+
+Cell[TextData[{
+ "1. The shared file (data.csv) has one of the eigenmodes of a hypothetical \
+one-d system, essentially the mode amplitude as a function of position. Plot \
+the data and have a feel of the eigenmode. \n\n2. The corresponding \
+eigenvalue problem is given by:\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["d", "2"], "y"}], 
+    SuperscriptBox["dx", "2"]], TraditionalForm]],ExpressionUUID->
+  "fbf68f4f-c78e-4fd5-94c2-b79b2248b099"],
+ "+\[Lambda] y = 0\ny(0) + ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"d", " ", "y"}], "dx"], 
+    SubscriptBox["|", 
+     RowBox[{"x", "=", "0"}]]}], TraditionalForm]],ExpressionUUID->
+  "24542572-bb85-4732-bb3b-c6497a017cda"],
+ "  = - a\ny(\[Pi]) + ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"d", " ", "y"}], "dx"], 
+    SubscriptBox["|", 
+     RowBox[{"x", "=", "\[Pi]"}]]}], TraditionalForm]],ExpressionUUID->
+  "21dfcf93-dee9-4572-aa31-b0d79744a8ba"],
+ "  = b\nHere,  \[Lambda], \[OpenCurlyDoubleQuote]a\[CloseCurlyDoubleQuote] \
+and \[OpenCurlyDoubleQuote]b\[CloseCurlyDoubleQuote] are real positive \
+constants and have the usual meaning. Find \[Lambda], \
+\[OpenCurlyDoubleQuote]a\[CloseCurlyDoubleQuote] and \[OpenCurlyDoubleQuote]b\
+\[CloseCurlyDoubleQuote] corresponding to the mode given in the data file.\n\n\
+3. Substitute the computed values of \[Lambda], \[OpenCurlyDoubleQuote]a\
+\[CloseCurlyDoubleQuote] and \[OpenCurlyDoubleQuote]b\[CloseCurlyDoubleQuote] \
+in step 2 and solve the eigenvalue problem numerically. Denote the numerical \
+solution as \[OpenCurlyDoubleQuote]soln1\[CloseCurlyDoubleQuote]. \n\n4. Plot \
+the numerical solution and the given data in a single figure and comment.\n\n\
+5. Subtract the small constant, 1.00111111 x ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["10", 
+    RowBox[{"-", "15"}]], TraditionalForm]],ExpressionUUID->
+  "faf76e4e-4e75-478a-a528-e14f9d11a913"],
+ " from the computed \[Lambda], \[OpenCurlyDoubleQuote]a\
+\[CloseCurlyDoubleQuote] and \[OpenCurlyDoubleQuote]b\[CloseCurlyDoubleQuote] \
+and redo part 3. Denote the computed numerical solution as \
+\[OpenCurlyDoubleQuote]soln2\[CloseCurlyDoubleQuote].\n\n6. Plot |soln1 - \
+soln2| as a function of \[OpenCurlyDoubleQuote]x\[CloseCurlyDoubleQuote], the \
+independent variable and comment on the plot. "
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.909660662659367*^9, 3.9096609386981153`*^9}, {
+   3.909662522342729*^9, 3.909662529543915*^9}, {3.909725712948935*^9, 
+   3.909725714007308*^9}, 3.909734043234374*^9, {3.909734078538191*^9, 
+   3.909734191067267*^9}, {3.9097342364617367`*^9, 3.90973455057312*^9}, {
+   3.909734581152437*^9, 3.909734780094759*^9}, {3.9097348140539017`*^9, 
+   3.9097349127414093`*^9}, {3.9097350460755577`*^9, 3.909735213301949*^9}, {
+   3.90973525004608*^9, 3.9097354370596237`*^9}, {3.9097364525763206`*^9, 
+   3.909736453738983*^9}, 3.9097365446453857`*^9, {3.909743165798396*^9, 
+   3.909743213452991*^9}, {3.909743280157776*^9, 3.909743280158534*^9}, {
+   3.9097441872327013`*^9, 3.909744187567787*^9}, {3.9097450767967453`*^9, 
+   3.909745125950811*^9}, {3.9097451655312157`*^9, 3.909745198294407*^9}, {
+   3.909745926191744*^9, 3.909745945421062*^9}, {3.909751525763606*^9, 
+   3.9097515269875317`*^9}, {3.909794017810663*^9, 3.909794064801339*^9}, {
+   3.909794099320752*^9, 3.9097940999200077`*^9}, {3.909794168666892*^9, 
+   3.909794174131773*^9}, {3.909794786379345*^9, 3.909794819564313*^9}, {
+   3.9097949008675127`*^9, 3.909794903818797*^9}, 3.909796109148677*^9},
+ FontWeight->"Plain",
+ CellID->1290047826,ExpressionUUID->"0de30b8a-5e50-4557-8dfe-e56bdbd3e4d9"],
+
+Cell[TextData[StyleBox["\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tGood Luck",
+ FontSize->18,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.909738572818171*^9, 3.909738603788493*^9}},
+ FontWeight->"Plain",
+ CellID->961879052,ExpressionUUID->"159b6b49-aaf6-4a9f-953d-161d7478a2fd"]
+},
+WindowSize->{1304, 727},
+WindowMargins->{{Automatic, 57}, {-28, Automatic}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
+TaggingRules-><|"$testsRun" -> False|>,
+SpellingDictionaries->{"CorrectWords"->{"csv"}},
+Magnification:>0.75 Inherited,
+FrontEndVersion->"13.2 for Mac OS X x86 (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> 
+     FrontEnd`FileName[{"MUnit"}, "MUnit.nb", CharacterEncoding -> 
+       "UTF-8"]]]}, Visible -> False, FrontEndVersion -> 
+  "13.2 for Mac OS X x86 (64-bit) (January 30, 2023)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"],
+ExpressionUUID->"0f7f4eec-305c-4c59-9813-54edbed2a548"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1750, 25, 151, "Text",ExpressionUUID->"22eab519-2e2d-4803-ab8b-1d642d0afd81",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->859383337],
+Cell[2311, 47, 3925, 69, 1257, "Text",ExpressionUUID->"3dcff2bb-a570-41da-8909-4c68ec6436ac",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->178287839],
+Cell[6239, 118, 349, 7, 72, "Text",ExpressionUUID->"c081b4a8-a360-4015-ae53-c04807c1496f",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->924258673],
+Cell[6591, 127, 2064, 34, 585, "Text",ExpressionUUID->"a4c57ee6-0f3e-44fe-a1e3-9ba5de6849e8",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->1548953722],
+Cell[8658, 163, 398, 7, 72, "Text",ExpressionUUID->"845d3dae-dc24-40b2-8aa3-e726b91817ed",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->1779301797],
+Cell[9059, 172, 4603, 92, 491, "Text",ExpressionUUID->"de1185ca-6257-416e-9cbd-3353f17b92c8",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->127957563],
+Cell[13665, 266, 350, 7, 72, "Text",ExpressionUUID->"9b1f92d6-aef8-4a45-9979-3c14df351017",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->429202065],
+Cell[14018, 275, 3708, 71, 723, "Text",ExpressionUUID->"0de30b8a-5e50-4557-8dfe-e56bdbd3e4d9",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->1290047826],
+Cell[17729, 348, 341, 6, 72, "Text",ExpressionUUID->"159b6b49-aaf6-4a9f-953d-161d7478a2fd",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->961879052]
+}
+]
+*)
+
