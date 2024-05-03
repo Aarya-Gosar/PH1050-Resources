@@ -1,0 +1,119 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4717,        111]
+NotebookOptionsPosition[      3767,         82]
+NotebookOutlinePosition[      4489,        106]
+CellTagsIndexPosition[      4446,        103]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["Assignment - 07:  On Linear and Nonlinear Regression",
+ 
+ FontSize->18,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.902660294012339*^9, 3.902660340268341*^9}, 
+   3.90266050426537*^9, {3.902661624081382*^9, 3.9026617425226173`*^9}, {
+   3.9026617942672987`*^9, 3.9026618165178328`*^9}, {3.9026618646529512`*^9, 
+   3.9026618717676077`*^9}, {3.9026619479819927`*^9, 3.902662027247834*^9}, {
+   3.9026622898685093`*^9, 3.902662292339713*^9}, 3.902662353316881*^9, {
+   3.902662387102285*^9, 3.9026625871829348`*^9}, {3.902665667582101*^9, 
+   3.902665686253454*^9}, {3.902740190874868*^9, 3.90274019445092*^9}, {
+   3.902961752612314*^9, 3.902961803693766*^9}, {3.902966200929556*^9, 
+   3.9029662092772093`*^9}, {3.904773079215495*^9, 3.904773092368147*^9}, {
+   3.904774338055511*^9, 3.9047743596005707`*^9}, {3.905986142931188*^9, 
+   3.905986149790804*^9}, {3.905986978157054*^9, 3.90598698435811*^9}, 
+   3.905987023963441*^9},
+ FontWeight->"Plain",
+ CellID->859383337,ExpressionUUID->"22eab519-2e2d-4803-ab8b-1d642d0afd81"],
+
+Cell["\<\
+This assignment concerns with linear and nonlinear regression
+
+A. Generate a linear data and add noise to get  the \
+\[OpenCurlyDoubleQuote]experimental data\[CloseCurlyDoubleQuote]
+\tDONE  1.   Fit the data manually and get the unknowns \
+\[OpenCurlyDoubleQuote]m\[CloseCurlyDoubleQuote] and \[OpenCurlyDoubleQuote]c\
+\[CloseCurlyDoubleQuote]. You may want to get the different regression \
+parameters from the fit. Plot the \[OpenCurlyDoubleQuote]experimental\
+\[CloseCurlyDoubleQuote] and the fitted data\t\t
+\t2.   Repeat the above using the Functions LinearModelFit and FindFit.  
+
+B. Generate a multi-parameter (at least 3) data with Gaussian Noise. 
+\tDONE 1.  Use FindFit to fit the data and extract the fit parameters. Plot \
+the generated and the \t      fitted data.
+\tDONE 2.  Convert the data into a suitable matrix form and use LinearSolve \
+to get the fit \t      \t\t      parameters. Plot the generated and the \
+fitted data.   
+
+C. Generate a non-linear data of your choice, add white noise and get the \
+\[OpenCurlyDoubleQuote]experimental\[CloseCurlyDoubleQuote] data.       Use \
+the function NonLinearModelFit to fit the experimental data and get the \
+fitted parameters.\t
+
+Comment on the results\t \
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.902961825579517*^9, 3.902961963878579*^9}, {
+   3.9029621175104113`*^9, 3.902962187493099*^9}, {3.902962780161584*^9, 
+   3.902962844569027*^9}, {3.902962941110991*^9, 3.902962976669847*^9}, {
+   3.902963940458281*^9, 3.90296394333035*^9}, {3.9047732744705553`*^9, 
+   3.9047735820977993`*^9}, {3.904773642433547*^9, 3.9047741669004717`*^9}, {
+   3.904774215802327*^9, 3.904774257858822*^9}, {3.905986157614956*^9, 
+   3.9059870481942883`*^9}, {3.9060061658043857`*^9, 3.906006166664687*^9}, 
+   3.906006601140843*^9, {3.9060084570409636`*^9, 3.9060084575869923`*^9}, {
+   3.9060096681275578`*^9, 3.9060096686700764`*^9}},
+ FontWeight->"Plain",
+ CellID->927572909,ExpressionUUID->"d9af3a23-6d40-4e6a-9087-803fc81dffca"]
+}, Open  ]]
+},
+WindowSize->{1414, 768},
+WindowMargins->{{0, Automatic}, {1, Automatic}},
+TaggingRules-><|"$testsRun" -> False|>,
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> 
+     FrontEnd`FileName[{"MUnit"}, "MUnit.nb", CharacterEncoding -> 
+       "UTF-8"]]]}, Visible -> False, FrontEndVersion -> 
+  "13.3 for Microsoft Windows (64-bit) (June 3, 2023)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"],
+ExpressionUUID->"13b05925-2f7d-468b-ba82-29d9d4ae0dbb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1125, 18, 46, "Text",ExpressionUUID->"22eab519-2e2d-4803-ab8b-1d642d0afd81",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->859383337],
+Cell[1708, 42, 2043, 37, 440, "Text",ExpressionUUID->"d9af3a23-6d40-4e6a-9087-803fc81dffca",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->927572909]
+}, Open  ]]
+}
+]
+*)
+

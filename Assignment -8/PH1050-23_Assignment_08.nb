@@ -1,0 +1,144 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6067,        136]
+NotebookOptionsPosition[      5150,        109]
+NotebookOutlinePosition[      5871,        133]
+CellTagsIndexPosition[      5828,        130]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Assignment - 08:  Response of linear systems to \
+arbitrary inputs",
+ FontSize->18,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.902660294012339*^9, 3.902660340268341*^9}, 
+   3.90266050426537*^9, {3.902661624081382*^9, 3.9026617425226173`*^9}, {
+   3.9026617942672987`*^9, 3.9026618165178328`*^9}, {3.9026618646529512`*^9, 
+   3.9026618717676077`*^9}, {3.9026619479819927`*^9, 3.902662027247834*^9}, {
+   3.9026622898685093`*^9, 3.902662292339713*^9}, 3.902662353316881*^9, {
+   3.902662387102285*^9, 3.9026625871829348`*^9}, {3.902665667582101*^9, 
+   3.902665686253454*^9}, {3.902740190874868*^9, 3.90274019445092*^9}, {
+   3.902961752612314*^9, 3.902961803693766*^9}, {3.902966200929556*^9, 
+   3.9029662092772093`*^9}, {3.904773079215495*^9, 3.904773092368147*^9}, {
+   3.904774338055511*^9, 3.9047743596005707`*^9}, {3.905986142931188*^9, 
+   3.905986149790804*^9}, {3.905986978157054*^9, 3.90598698435811*^9}, 
+   3.905987023963441*^9, {3.906587403206739*^9, 3.906587446809061*^9}, 
+   3.9065904389013643`*^9, {3.906591884683805*^9, 3.906591885747673*^9}},
+ FontWeight->"Plain",
+ CellID->859383337,ExpressionUUID->"22eab519-2e2d-4803-ab8b-1d642d0afd81"],
+
+Cell["\<\
+This assignment concerns with the response of linear time invariant systems \
+to arbitrary inputs. All systems we consider are Causal as well.
+
+Part A
+Choose a simple RC or LC circuit, the dynamic response (current or voltage \
+response) of which, as you are aware, can be cast as a first order initial \
+value problem. 
+
+Analysis in time domain
+\t1.  Choose one RC or LC circuit and compute numerically its response to a \
+step input. Compare the result with the analytical solution.
+\t2. Generate an arbitrary signal which is a sum of several piecewise \
+continuous signals. Compute the response of the circuit to this arbitrary \
+input. 
+\t3. Choose a Causal square pulse such that its width is at least five orders \
+smaller than the time response of the circuit you have chosen. Compute the \
+response of the circuit \tto this narrow pulse input. This response is called \
+the Impulse Response, which is \t\tactually the Causal \
+Green\[CloseCurlyQuote]s function for the circuit. Denote the Impulse \
+Response as h(t) and plot the same as a function of time. 
+
+Analysis in frequency domain
+\t1. Find the transfer function of the circuit and denote it as H(\[Omega]). \
+Plot the absolute and relative phase angle of H(\[Omega]) as a function of  \
+\[Omega]. You may also want to plot the Real and Imaginary parts of  H(\
+\[Omega]).  
+
+Part B
+Choose a second order linear circuit such as a series LCR circuit with a \
+suitable decay constant and natural frequency of oscillation. Set the \
+constants so that the circuit is not over-damped.
+\t1. Compute the impulse response of the circuit and plot the same. 
+\t2. Compute the response of the circuit to a causal square wave and plot the \
+same.
+\t3. If time permits study the response to an arbitrary input. You may want \
+to use the \t\tone that you have created earlier (section 2 of Part A). 
+
+Of course you can study the system in frequency domain by computing the \
+transfer function H(\[Omega]) of the circuit. This is not required as you \
+must have done the same in PH1010 under the title damped harmonic \
+oscillations. The gain (essentially  the absolute value of H(\[Omega])) \
+showing resonance and the phase angle showing a shift of Pi.
+
+ Think about the following:
+\t1. Are the impulse response h(t) and transfer function H(\[Omega]) related \
+in some way. Is it possible to compute H(\[Omega]), given h(t) and vice \
+versa?
+\t2. Given the impulse response h(t), can we compute the response of the \
+circuit to an arbitrary input? 
+\t3. If the above is possible, will it be an alternative to solving the \
+differential equations? 
+\tThe above questions may have lead you to an interesting mathematical \
+operation called Convolution. \
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQB2IQnd5tJOIv8tYxSLZGFUR7hW6wANEVx/MdQfQm7dZu
+MN900mQQbdu7eD6ITs4XXQLmr+qTCQDSVpNegelTfP6TD4u/ddRRPLwTRM+7
+73sQRK+6cIfpCIhe85MDRFdUW/OB6B1rN58VlnrrOMeczVYESPdenJ9uKf3W
+8UbjvDYQbSPytAdEK01vPwKiXzkwnQLRf2SP3gfRLnleT0D0nrC1wlZAWrvC
+XgJEixYGyYHoY4dClUH0BsHPgSDa9H5BBIj+clYsGkQ3+qokgOio3m8pIPrV
+OZ1MEN1WMOEYiDavaTkFopXEZp8G0SyL9lwG0fIZn2+A6Ka9hg9B9Kd43Wdg
++9pXvQXRXKKi30F0yYV9/0D01GNb/oNoAAK6pUU=
+  "],
+ FontWeight->"Plain",
+ CellID->927572909,ExpressionUUID->"d9af3a23-6d40-4e6a-9087-803fc81dffca"]
+},
+WindowSize->{1334, 779},
+WindowMargins->{{19, Automatic}, {Automatic, 4}},
+TaggingRules-><|"$testsRun" -> False|>,
+FrontEndVersion->"13.2 for Mac OS X x86 (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> 
+     FrontEnd`FileName[{"MUnit"}, "MUnit.nb", CharacterEncoding -> 
+       "UTF-8"]]]}, Visible -> False, FrontEndVersion -> 
+  "13.2 for Mac OS X x86 (64-bit) (January 30, 2023)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"],
+ExpressionUUID->"3be32f0a-f09d-42b1-8d50-00cc1874c767"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1257, 19, 94, "Text",ExpressionUUID->"22eab519-2e2d-4803-ab8b-1d642d0afd81",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->859383337],
+Cell[1818, 41, 3328, 66, 2112, "Text",ExpressionUUID->"d9af3a23-6d40-4e6a-9087-803fc81dffca",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->927572909]
+}
+]
+*)
+

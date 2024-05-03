@@ -1,0 +1,458 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17411,        450]
+NotebookOptionsPosition[     15222,        401]
+NotebookOutlinePosition[     16028,        426]
+CellTagsIndexPosition[     15985,        423]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Assignment - 03:  On Visualizing Vector Fields ",
+ FontSize->18,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.902660294012339*^9, 3.902660340268341*^9}, 
+   3.90266050426537*^9, {3.902661624081382*^9, 3.9026617425226173`*^9}, {
+   3.9026617942672987`*^9, 3.9026618165178328`*^9}, {3.9026618646529512`*^9, 
+   3.9026618717676077`*^9}, {3.9026619479819927`*^9, 3.902662027247834*^9}, {
+   3.9026622898685093`*^9, 3.902662292339713*^9}, 3.902662353316881*^9, {
+   3.902662387102285*^9, 3.9026625871829348`*^9}, {3.902665667582101*^9, 
+   3.902665686253454*^9}, {3.902740190874868*^9, 3.90274019445092*^9}, {
+   3.902961752612314*^9, 3.902961803693766*^9}, {3.902966200929556*^9, 
+   3.9029662092772093`*^9}},
+ FontWeight->"Plain",
+ CellID->859383337,ExpressionUUID->"22eab519-2e2d-4803-ab8b-1d642d0afd81"],
+
+Cell[TextData[StyleBox["Part 1:",
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.902646536966938*^9, 3.902646585067932*^9}, {
+   3.9026470061686363`*^9, 3.902647019304179*^9}, {3.902648319200306*^9, 
+   3.902648466233755*^9}, {3.902649124081049*^9, 3.902649222299974*^9}, 
+   3.902665357966817*^9, 3.902665435006054*^9, {3.9027400710295763`*^9, 
+   3.9027400721139727`*^9}, {3.902961812827952*^9, 3.902961821651589*^9}},
+ FontWeight->"Plain",
+ CellID->221336030,ExpressionUUID->"b0db85e9-3077-4077-b818-6743a0a3822b"],
+
+Cell[TextData[{
+ "Consider a wire of length 2L aligned along the z-axis and carrying a \
+current \[OpenCurlyDoubleQuote]i\[CloseCurlyDoubleQuote]. The expression for \
+the Magnetic induction: \n",
+ Cell[BoxData[
+  FractionBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"L", "-", "z"}], 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"L", "-", "z"}], ")"}], "2"], "+", 
+       SuperscriptBox["\[Rho]", "2"]}]]], "+", 
+    FractionBox[
+     RowBox[{"L", "+", "z"}], 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"L", "+", "z"}], ")"}], "2"], "+", 
+       SuperscriptBox["\[Rho]", "2"]}]]]}], "\[Rho]"]],
+  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+  CellChangeTimes->{
+   3.9028957720469007`*^9, 3.902897446031451*^9, {3.902897485276882*^9, 
+    3.902897500195025*^9}, 3.9028976654317703`*^9, 3.902901933598607*^9, 
+    3.9029019636675*^9},ExpressionUUID->
+  "70b38390-fddf-4d0e-8ef5-82ab696e9b16"],
+ ", where  the expression is given in cylindrical polar coordinates. Keep in \
+my mind the actual expression will have the prefactor:\n",
+ Cell[BoxData[
+  RowBox[{
+   OverscriptBox["k", "\[RightVector]"], " ", "=", " ", 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      SubscriptBox["\[Mu]", "0"], " ", "i"}], 
+     RowBox[{"4", " ", "\[Pi]"}]], 
+    SubscriptBox[
+     OverscriptBox["e", "^"], "\[Phi]"]}]}]],
+  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+  CellChangeTimes->{3.90289519447202*^9},
+  FontWeight->"Plain",ExpressionUUID->"e15abead-5f86-4bda-9167-4d57e83e949f"]
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.902961825579517*^9, 3.902961963878579*^9}, {
+  3.9029621175104113`*^9, 3.902962187493099*^9}, {3.902962780161584*^9, 
+  3.902962844569027*^9}, {3.902962941110991*^9, 3.902962976669847*^9}, {
+  3.902963940458281*^9, 3.90296394333035*^9}},
+ FontWeight->"Plain",
+ CellID->927572909,ExpressionUUID->"d9af3a23-6d40-4e6a-9087-803fc81dffca"],
+
+Cell[TextData[{
+ "1)\nRecall the discussion in the class and by solving the following \
+integral symbolically\n\n",
+ Cell[BoxData[
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", 
+    RowBox[{"-", "L"}], "L"], 
+   RowBox[{
+    FractionBox["\[Rho]", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox["\[Rho]", "2"], "+", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"z", " ", "-", " ", "u"}], ")"}], "2"]}], ")"}], 
+      FractionBox["3", "2"]]], 
+    RowBox[{"\[DifferentialD]", "u"}]}]}]],
+  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+  CellChangeTimes->{3.90289519447202*^9},
+  FontWeight->"Plain",ExpressionUUID->
+  "e6c20c66-9967-4c0d-b54b-484ebb93cc0e"],
+ "\n\nto obtain the expression: \n\n",
+ Cell[BoxData[
+  FractionBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"L", "-", "z"}], 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"L", "-", "z"}], ")"}], "2"], "+", 
+       SuperscriptBox["\[Rho]", "2"]}]]], "+", 
+    FractionBox[
+     RowBox[{"L", "+", "z"}], 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"L", "+", "z"}], ")"}], "2"], "+", 
+       SuperscriptBox["\[Rho]", "2"]}]]]}], "\[Rho]"]],
+  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+  CellChangeTimes->{
+   3.9028957720469007`*^9, 3.902897446031451*^9, {3.902897485276882*^9, 
+    3.902897500195025*^9}, 3.9028976654317703`*^9, 3.902901933598607*^9, 
+    3.9029019636675*^9},ExpressionUUID->
+  "bd2448b0-4d7e-41ab-8f47-c16509566ea6"],
+ ",\n\nNote \[Rho], z and L are positive real constants and you may have to \
+specify them to avoid a detailed output. \n\nNote if you cannot rearrange the \
+expression to match what is given above, you can proceed further. "
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.902962190932397*^9, 3.90296222493573*^9}, {
+  3.902962287903961*^9, 3.902962510877543*^9}, {3.902962998667946*^9, 
+  3.902963004339759*^9}, {3.902963954361998*^9, 3.9029639566500893`*^9}, {
+  3.902965351170348*^9, 3.9029653662501383`*^9}, {3.902965778426114*^9, 
+  3.902965786361405*^9}, {3.9029658462177057`*^9, 3.9029659991717997`*^9}},
+ FontWeight->"Plain",
+ CellID->1909231217,ExpressionUUID->"b7738491-1f08-4955-8b76-141e2c5fdc47"],
+
+Cell[TextData[{
+ "2)\nApply the limit, L -> infinity to ",
+ Cell[BoxData[
+  FractionBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"L", "-", "z"}], 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"L", "-", "z"}], ")"}], "2"], "+", 
+       SuperscriptBox["\[Rho]", "2"]}]]], "+", 
+    FractionBox[
+     RowBox[{"L", "+", "z"}], 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"L", "+", "z"}], ")"}], "2"], "+", 
+       SuperscriptBox["\[Rho]", "2"]}]]]}], "\[Rho]"]],
+  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+  CellChangeTimes->{
+   3.9028957720469007`*^9, 3.902897446031451*^9, {3.902897485276882*^9, 
+    3.902897500195025*^9}, 3.9028976654317703`*^9, 3.902901933598607*^9, 
+    3.9029019636675*^9},ExpressionUUID->
+  "aaee8525-1bc6-4855-9dbf-d1728d58eb92"],
+ "and show that it reduces to:\n ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["2", "\[Rho]"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "889bfbda-c925-4c30-86b7-2bf4d56d8fae"],
+ ". \n\nRemember the prefactor ",
+ Cell[BoxData[
+  RowBox[{
+   OverscriptBox["k", "\[RightVector]"], " ", "=", " ", 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      SubscriptBox["\[Mu]", "0"], " ", "i"}], 
+     RowBox[{"4", " ", "\[Pi]"}]], 
+    SubscriptBox[
+     OverscriptBox["e", "^"], "\[Phi]"]}]}]],
+  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+  CellChangeTimes->{3.90289519447202*^9},
+  FontWeight->"Plain",ExpressionUUID->
+  "c8dbcce8-b87c-4c59-bd08-ec9f19a2bc17"],
+ ".\n\nRecast the expression in terms of Cartesian:",
+ Cell[BoxData[
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox[
+      RowBox[{"2", " ", "y"}], 
+      RowBox[{
+       SuperscriptBox["x", "2"], "+", 
+       SuperscriptBox["y", "2"]}]]}], ",", 
+    FractionBox[
+     RowBox[{"2", " ", "x"}], 
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", 
+      SuperscriptBox["y", "2"]}]]}], "}"}]],
+  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+  CellChangeTimes->{
+   3.9028957720469007`*^9, 3.902897446031451*^9, {3.902897485276882*^9, 
+    3.902897500195025*^9}, 3.9028976654317703`*^9, 3.902901933598607*^9, 
+    3.902901969600219*^9},ExpressionUUID->
+  "291b9dcc-f5fd-4884-8629-4fdbf56895cf"],
+ "\n\nPlot the different field plots and visualize the field."
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.902965405493814*^9, 3.9029654080715837`*^9}, {
+  3.902965525472498*^9, 3.90296552628798*^9}, {3.902966021121399*^9, 
+  3.902966037175973*^9}},
+ FontWeight->"Plain",
+ CellID->1126539952,ExpressionUUID->"1818d740-42a1-41a6-9374-e645aa8fd062"],
+
+Cell[TextData[{
+ "3)\nGet the expression for the magnetic induction due to the short wire in \
+Cartesian (Recall the class discussions) beginning  from ",
+ Cell[BoxData[
+  FractionBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"L", "-", "z"}], 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"L", "-", "z"}], ")"}], "2"], "+", 
+       SuperscriptBox["\[Rho]", "2"]}]]], "+", 
+    FractionBox[
+     RowBox[{"L", "+", "z"}], 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"L", "+", "z"}], ")"}], "2"], "+", 
+       SuperscriptBox["\[Rho]", "2"]}]]]}], "\[Rho]"]],
+  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+  CellChangeTimes->{
+   3.9028957720469007`*^9, 3.902897446031451*^9, {3.902897485276882*^9, 
+    3.902897500195025*^9}, 3.9028976654317703`*^9, 3.902901933598607*^9, 
+    3.9029019636675*^9},ExpressionUUID->
+  "326d70f6-e194-476e-a874-3e5b75d99a00"],
+ " as:\n \n",
+ Cell[BoxData[
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox[
+      RowBox[{"y", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"L", "-", "z"}], 
+          SqrtBox[
+           RowBox[{
+            SuperscriptBox["x", "2"], "+", 
+            SuperscriptBox["y", "2"], "+", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{"L", "-", "z"}], ")"}], "2"]}]]], "+", 
+         FractionBox[
+          RowBox[{"L", "+", "z"}], 
+          SqrtBox[
+           RowBox[{
+            SuperscriptBox["x", "2"], "+", 
+            SuperscriptBox["y", "2"], "+", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{"L", "+", "z"}], ")"}], "2"]}]]]}], ")"}]}], 
+      RowBox[{
+       SuperscriptBox["x", "2"], "+", 
+       SuperscriptBox["y", "2"]}]]}], ",", 
+    FractionBox[
+     RowBox[{"x", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"L", "-", "z"}], 
+         SqrtBox[
+          RowBox[{
+           SuperscriptBox["x", "2"], "+", 
+           SuperscriptBox["y", "2"], "+", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"L", "-", "z"}], ")"}], "2"]}]]], "+", 
+        FractionBox[
+         RowBox[{"L", "+", "z"}], 
+         SqrtBox[
+          RowBox[{
+           SuperscriptBox["x", "2"], "+", 
+           SuperscriptBox["y", "2"], "+", 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"L", "+", "z"}], ")"}], "2"]}]]]}], ")"}]}], 
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", 
+      SuperscriptBox["y", "2"]}]]}], "}"}]],
+  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+  CellChangeTimes->{
+   3.9028957720469007`*^9, 3.902897446031451*^9, {3.902897485276882*^9, 
+    3.902897500195025*^9}, 3.9028976654317703`*^9, 3.902901933598607*^9, 
+    3.9029019636675*^9, 3.902965140600142*^9, 3.902965196669791*^9, 
+    3.902965263011496*^9},ExpressionUUID->
+  "d530e7ce-de2e-4567-8b64-0e898ce45d0d"]
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.902962516941218*^9, 3.902962545931415*^9}, {
+   3.902962605860168*^9, 3.902962645315248*^9}, {3.902962735813161*^9, 
+   3.9029627381331797`*^9}, 3.9029630291724863`*^9, {3.902963959105755*^9, 
+   3.902963960721426*^9}, {3.902965452114987*^9, 3.9029654995772057`*^9}, {
+   3.902965534653092*^9, 3.9029655415485888`*^9}, {3.902965590642179*^9, 
+   3.902965595953539*^9}, 3.902965817435932*^9},
+ FontWeight->"Plain",
+ CellID->1907149978,ExpressionUUID->"da3efe75-acf1-4f3d-a6a7-72b1853f0bde"],
+
+Cell[TextData[{
+ "4)\nTry plotting the field on the x-y plane, taking L = 1 unit.\nConfirm \
+this reduces to ",
+ Cell[BoxData[
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox[
+      RowBox[{"2", " ", "y"}], 
+      RowBox[{
+       SuperscriptBox["x", "2"], "+", 
+       SuperscriptBox["y", "2"]}]]}], ",", 
+    FractionBox[
+     RowBox[{"2", " ", "x"}], 
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", 
+      SuperscriptBox["y", "2"]}]]}], "}"}]],
+  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+  CellChangeTimes->{
+   3.9028957720469007`*^9, 3.902897446031451*^9, {3.902897485276882*^9, 
+    3.902897500195025*^9}, 3.9028976654317703`*^9, 3.902901933598607*^9, 
+    3.9029019636675*^9, 3.902965140600142*^9, 3.902965196669791*^9, 
+    3.902965266449649*^9},ExpressionUUID->
+  "30f80904-4d53-4ac8-8e10-6ecda959ceb7"],
+ " in the limit L -> Infinity.  "
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.902962658686562*^9, 3.902962704946156*^9}, {
+   3.902963963008276*^9, 3.902963964609468*^9}, {3.90296557325041*^9, 
+   3.9029657131133137`*^9}, {3.902965757799074*^9, 3.902965759462719*^9}, 
+   3.9029658209474277`*^9},
+ FontWeight->"Plain",
+ CellID->813283819,ExpressionUUID->"f5c90401-11cd-4b5f-bb79-10e944486023"],
+
+Cell[TextData[StyleBox["Part 2: Proceed only if you have plenty of time left",
+ 
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.90296331407421*^9, 3.9029633160275927`*^9}, {
+  3.902963976465147*^9, 3.902964001728385*^9}, {3.902964131357585*^9, 
+  3.902964156973138*^9}},
+ FontWeight->"Plain",
+ CellID->1271116596,ExpressionUUID->"53bfaf7a-a417-4455-bc90-0ad9aca81b1f"],
+
+Cell[TextData[{
+ "Plot the different fields for the tilted dipole (making equal angle with z- \
+and y-axis), the potential of which is given in spherical polar coordinate \
+system by:\nvDp = (p Cos[\[Theta]] +  p Sin[\[Theta]] Sin[\[CurlyPhi]])/r^2\n\
+You need to just follow what was discussed for the vertical dipole.\n\n",
+ StyleBox["Alternatively \n",
+  FontColor->RGBColor[0, 0, 1]],
+ "You can choose a  charge distribution, get the the expressions for the \
+potential and the field and plot equipotentials and stream lines. "
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.9029634142739897`*^9, 3.902963701120101*^9}, {
+   3.9029637465691643`*^9, 3.9029638335839033`*^9}, 3.902963921354604*^9, {
+   3.9029640095122967`*^9, 3.9029640225441923`*^9}},
+ FontWeight->"Plain",
+ CellID->639603055,ExpressionUUID->"5032608a-6de1-4784-a5d5-1cbd545ffe7e"]
+},
+WindowSize->{1271, 702},
+WindowMargins->{{83, Automatic}, {43, Automatic}},
+TaggingRules-><|"$testsRun" -> False|>,
+FrontEndVersion->"13.2 for Mac OS X x86 (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> 
+     FrontEnd`FileName[{"MUnit"}, "MUnit.nb", CharacterEncoding -> 
+       "UTF-8"]]]}, WindowSize -> {808, 667}, 
+  WindowMargins -> {{108, Automatic}, {Automatic, 132}}, Visible -> False, 
+  FrontEndVersion -> "13.2 for Mac OS X x86 (64-bit) (January 30, 2023)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"],
+ExpressionUUID->"873dde51-0936-423d-9da6-9aa6a681d6a8"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 899, 14, 94, "Text",ExpressionUUID->"22eab519-2e2d-4803-ab8b-1d642d0afd81",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->859383337],
+Cell[1460, 36, 588, 9, 87, "Text",ExpressionUUID->"b0db85e9-3077-4077-b818-6743a0a3822b",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->221336030],
+Cell[2051, 47, 2011, 51, 347, "Text",ExpressionUUID->"d9af3a23-6d40-4e6a-9087-803fc81dffca",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->927572909],
+Cell[4065, 100, 2316, 59, 774, "Text",ExpressionUUID->"b7738491-1f08-4955-8b76-141e2c5fdc47",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->1909231217],
+Cell[6384, 161, 2662, 76, 563, "Text",ExpressionUUID->"1818d740-42a1-41a6-9374-e645aa8fd062",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->1126539952],
+Cell[9049, 239, 3545, 99, 486, "Text",ExpressionUUID->"da3efe75-acf1-4f3d-a6a7-72b1853f0bde",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->1907149978],
+Cell[12597, 340, 1283, 32, 240, "Text",ExpressionUUID->"f5c90401-11cd-4b5f-bb79-10e944486023",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->813283819],
+Cell[13883, 374, 439, 8, 87, "Text",ExpressionUUID->"53bfaf7a-a417-4455-bc90-0ad9aca81b1f",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->1271116596],
+Cell[14325, 384, 893, 15, 402, "Text",ExpressionUUID->"5032608a-6de1-4784-a5d5-1cbd545ffe7e",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->639603055]
+}
+]
+*)
+

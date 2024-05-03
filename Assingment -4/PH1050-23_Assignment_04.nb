@@ -1,0 +1,358 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15299,        350]
+NotebookOptionsPosition[     12364,        287]
+NotebookOutlinePosition[     13086,        311]
+CellTagsIndexPosition[     13043,        308]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Assignment - 04:  On Non-Linear Ordinary Differential \
+Equations ",
+ FontSize->18,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.902660294012339*^9, 3.902660340268341*^9}, 
+   3.90266050426537*^9, {3.902661624081382*^9, 3.9026617425226173`*^9}, {
+   3.9026617942672987`*^9, 3.9026618165178328`*^9}, {3.9026618646529512`*^9, 
+   3.9026618717676077`*^9}, {3.9026619479819927`*^9, 3.902662027247834*^9}, {
+   3.9026622898685093`*^9, 3.902662292339713*^9}, 3.902662353316881*^9, {
+   3.902662387102285*^9, 3.9026625871829348`*^9}, {3.902665667582101*^9, 
+   3.902665686253454*^9}, {3.902740190874868*^9, 3.90274019445092*^9}, {
+   3.902961752612314*^9, 3.902961803693766*^9}, {3.902966200929556*^9, 
+   3.9029662092772093`*^9}, {3.9035236829742813`*^9, 3.903523718557499*^9}, 
+   3.903566043835573*^9},
+ FontWeight->"Plain",
+ CellID->859383337,ExpressionUUID->"22eab519-2e2d-4803-ab8b-1d642d0afd81"],
+
+Cell[TextData[StyleBox["Part 1: Amplitude dependence of the time period of \
+oscillations. ",
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.902646536966938*^9, 3.902646585067932*^9}, {
+   3.9026470061686363`*^9, 3.902647019304179*^9}, {3.902648319200306*^9, 
+   3.902648466233755*^9}, {3.902649124081049*^9, 3.902649222299974*^9}, 
+   3.902665357966817*^9, 3.902665435006054*^9, {3.9027400710295763`*^9, 
+   3.9027400721139727`*^9}, {3.902961812827952*^9, 3.902961821651589*^9}, {
+   3.903563198818766*^9, 3.903563216322323*^9}},
+ FontWeight->"Plain",
+ CellID->221336030,ExpressionUUID->"b0db85e9-3077-4077-b818-6743a0a3822b"],
+
+Cell[TextData[{
+ "Consider a one-dimensional conservative system with a particle of ",
+ StyleBox["unit mass",
+  FontColor->RGBColor[1, 0, 0]],
+ " subjected to the potential ",
+ Cell[BoxData[
+  RowBox[{"vP", " ", "=", " ", 
+   RowBox[{
+    FractionBox[
+     SuperscriptBox["x", "4"], "4"], "-", 
+    FractionBox[
+     SuperscriptBox["x", "2"], "2"]}]}]],
+  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+  CellChangeTimes->{{3.903523934546669*^9, 3.90352402556225*^9}},
+  FontWeight->"Plain",ExpressionUUID->
+  "243ecfa0-658a-4669-866d-cf16d15d7ae5"],
+ ". As you can see it is a bound system with total energy varying from \
+negative to positive infinity! \n\n1) Plot the potential in a suitable small \
+range so that the ",
+ StyleBox["main features",
+  FontColor->RGBColor[1, 0, 0]],
+ " of the potential can be seen clearly. The plot should help you guess how \
+the initial conditions determine the ",
+ StyleBox["dynamics",
+  FontColor->RGBColor[1, 0, 0]],
+ " (motion) of the particle.    \n\n2) Find the ",
+ StyleBox["time period",
+  FontColor->RGBColor[1, 0, 0]],
+ " of oscillations, corresponding to ",
+ StyleBox["at least  6 different",
+  FontColor->RGBColor[1, 0, 0]],
+ " total energies (choose these values judiciously) and plot the variation of \
+",
+ StyleBox["time period",
+  FontColor->RGBColor[1, 0, 0]],
+ " with the ",
+ StyleBox["amplitude",
+  FontColor->RGBColor[1, 0, 0]],
+ " of the oscillations. ",
+ StyleBox["Beware",
+  FontColor->RGBColor[1, 0, 0]],
+ " of the case where the time period may go to infinity. "
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.902961825579517*^9, 3.902961963878579*^9}, {
+   3.9029621175104113`*^9, 3.902962187493099*^9}, {3.902962780161584*^9, 
+   3.902962844569027*^9}, {3.902962941110991*^9, 3.902962976669847*^9}, {
+   3.902963940458281*^9, 3.90296394333035*^9}, {3.9035241408003807`*^9, 
+   3.903524396126143*^9}, {3.903524935850213*^9, 3.903524986511602*^9}, {
+   3.903525034290061*^9, 3.903525154260632*^9}, {3.903525334281096*^9, 
+   3.903525366377968*^9}, {3.903525409730866*^9, 3.903525464327928*^9}, {
+   3.903562594722683*^9, 3.903562623363409*^9}, {3.903562881231127*^9, 
+   3.903563061040732*^9}, {3.903563346350779*^9, 3.903563380446651*^9}, {
+   3.903563439040064*^9, 3.903563518375415*^9}, 3.9035657518813877`*^9},
+ FontWeight->"Plain",
+ CellID->927572909,ExpressionUUID->"d9af3a23-6d40-4e6a-9087-803fc81dffca"],
+
+Cell[TextData[StyleBox["Part 2: Nature of motion from the plots of the \
+solutions",
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.903525279410582*^9, 3.903525286119975*^9}, {
+  3.9035632230983543`*^9, 3.903563244443695*^9}},
+ FontWeight->"Plain",
+ CellID->1052646407,ExpressionUUID->"71b0f282-21b9-4aae-b2c6-c6a978a59f16"],
+
+Cell[TextData[{
+ "1) Find the corresponding ",
+ StyleBox["force",
+  FontColor->RGBColor[1, 0, 0]],
+ ". \n\n2) Write down the ",
+ StyleBox["equation of motion",
+  FontColor->RGBColor[1, 0, 0]],
+ " after adding a velocity dependent ",
+ StyleBox["dissipative",
+  FontColor->RGBColor[1, 0, 0]],
+ " term ",
+ StyleBox["\[Gamma] y\[CloseCurlyQuote][t]",
+  FontColor->RGBColor[1, 0, 0]],
+ " and a forcing term, ",
+ StyleBox["A Sin[2 \[Omega] t]",
+  FontColor->RGBColor[1, 0, 0]],
+ ". \n\n3) Let ",
+ StyleBox["A = 2, \[Omega] = 1.5, \[Gamma] = 0.0",
+  FontColor->RGBColor[1, 0, 0]],
+ ". Solve the equation of motion assuming the initial conditions, ",
+ StyleBox["y[0] = -1.8  &  y\[CloseCurlyQuote][0] = 0",
+  FontColor->RGBColor[1, 0, 0]],
+ " for the time range ",
+ StyleBox["0 to 100",
+  FontColor->RGBColor[1, 0, 0]],
+ ". Plot the solution ",
+ StyleBox["y[t]",
+  FontColor->RGBColor[1, 0, 0]],
+ " as a function of \[OpenCurlyDoubleQuote]t\[CloseCurlyDoubleQuote] in the \
+range ",
+ StyleBox["0 to 30",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[".",
+  FontColor->GrayLevel[0]],
+ "\n\n4) Repeat step ",
+ StyleBox["three",
+  FontColor->RGBColor[1, 0, 0]],
+ " for ",
+ StyleBox["3",
+  FontColor->RGBColor[1, 0, 0]],
+ " more values of ",
+ StyleBox["\[Gamma] : 0.6, 1.2 ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["and ",
+  FontColor->GrayLevel[0]],
+ StyleBox["1.8",
+  FontColor->RGBColor[1, 0, 0]],
+ ".   \n\n5) Look at the ",
+ StyleBox["4 plots",
+  FontColor->RGBColor[1, 0, 0]],
+ " (you may want to use the function GraphicsColumn so that the plots appear \
+as two-column images) and think for a while. Briefly write about the ",
+ StyleBox["nature of motion",
+  FontColor->RGBColor[1, 0, 0]],
+ " like for example, where the particle begins and ends up eventually, for \
+each one of the ",
+ StyleBox["4 cases",
+  FontColor->RGBColor[1, 0, 0]],
+ ". \n\nEssentially you should be in a position to ",
+ StyleBox["comprehend, appreciate and express",
+  FontColor->RGBColor[1, 0, 0]],
+ " how the given ",
+ StyleBox["initial conditions combined with the damping strength",
+  FontColor->RGBColor[1, 0, 0]],
+ " decides the dynamics  during the ",
+ StyleBox["three phases",
+  FontColor->RGBColor[1, 0, 0]],
+ ":  ",
+ StyleBox["Initial, intermediate and steady state",
+  FontColor->RGBColor[1, 0, 0]],
+ ".  "
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.902962190932397*^9, 3.90296222493573*^9}, {
+   3.902962287903961*^9, 3.902962510877543*^9}, {3.902962998667946*^9, 
+   3.902963004339759*^9}, {3.902963954361998*^9, 3.9029639566500893`*^9}, {
+   3.902965351170348*^9, 3.9029653662501383`*^9}, {3.902965778426114*^9, 
+   3.902965786361405*^9}, {3.9029658462177057`*^9, 3.9029659991717997`*^9}, {
+   3.903525482765951*^9, 3.903525525912593*^9}, {3.903563144131678*^9, 
+   3.903563183892074*^9}, {3.903563259663212*^9, 3.903563293160557*^9}, {
+   3.9035635718714333`*^9, 3.9035636017914886`*^9}, {3.9035636458178673`*^9, 
+   3.903563783705512*^9}, {3.903563844980226*^9, 3.903563930817507*^9}, {
+   3.903563963202794*^9, 3.903564021723275*^9}, {3.903564091930594*^9, 
+   3.903564172010446*^9}, {3.903564307865902*^9, 3.903564393962768*^9}, {
+   3.903564442758748*^9, 3.903564865118668*^9}, {3.9035648962679577`*^9, 
+   3.903564912969604*^9}, {3.9035649432330914`*^9, 3.903565005517872*^9}, 
+   3.903565125243291*^9, 3.903565251654798*^9, {3.9035652883510017`*^9, 
+   3.903565301950572*^9}, {3.903565789949153*^9, 3.903565836703601*^9}, {
+   3.9035658760289803`*^9, 3.903565876403656*^9}, {3.903566143469602*^9, 
+   3.9035661903042593`*^9}, {3.903566722718796*^9, 3.903566761160185*^9}, {
+   3.903566797865307*^9, 3.903566812801425*^9}, {3.903566952595827*^9, 
+   3.903566986134904*^9}},
+ FontWeight->"Plain",
+ CellID->1909231217,ExpressionUUID->"b7738491-1f08-4955-8b76-141e2c5fdc47"],
+
+Cell[TextData[StyleBox["Part 3: Further explorations",
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.9035653439956837`*^9, 3.903565407050087*^9}},
+ FontWeight->"Plain",
+ CellID->1759352527,ExpressionUUID->"0f58d3a9-53d4-475e-a759-97be334f3210"],
+
+Cell["\<\
+If you have time and enthusiasm, choose one case, compute \
+y\[CloseCurlyQuote][t] and plot it against y[t]: Essentially, velocity \
+against displacement. You may also want to use the function ParametricPlot, \
+for this purpose. This should lead you to the gateway to the wonderful world \
+of non-linear dynamics.   \
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.9035654099620247`*^9, 3.903565642591755*^9}, {
+  3.903565907204021*^9, 3.903565953940983*^9}, {3.903566830375483*^9, 
+  3.903566901757399*^9}},
+ FontWeight->"Plain",
+ CellID->1320175686,ExpressionUUID->"958b103f-6028-4e9a-a7ef-9986e2818e88"],
+
+Cell[TextData[StyleBox["Evaluation Pattern to be a followed",
+ FontSize->18,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.9029763859841833`*^9, 3.902976459021414*^9}, {
+  3.9029765087742453`*^9, 3.902976508902067*^9}, {3.9035651533595667`*^9, 
+  3.903565160104477*^9}},
+ FontWeight->"Plain",
+ CellID->281704595,ExpressionUUID->"17b85abd-b7cb-44e1-bb63-c401883f56b5"],
+
+Cell["Sincere effort but without any result :   10-11 ", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.9029765176023703`*^9, 3.902976565083888*^9}, 
+   3.9029766092349863`*^9},
+ FontWeight->"Plain",
+ CellID->488358323,ExpressionUUID->"84acb793-64aa-404b-9b9d-d08146564fb6"],
+
+Cell["Code completed without writeup: 14-15\t", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.902976574082852*^9, 3.90297660185201*^9}},
+ FontWeight->"Plain",
+ CellID->143665963,ExpressionUUID->"e9a3bebc-ccb6-44f2-9743-c4c72980514c"],
+
+Cell["Code completed with full writeup: 16-17", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.902976613890832*^9, 3.9029766454935207`*^9}},
+ FontWeight->"Plain",
+ CellID->641756405,ExpressionUUID->"7649dcdf-f349-47b1-a0e1-2d4161bc41ea"],
+
+Cell["Additional work - more than what is specified: 18-20", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.9029766540718813`*^9, 3.902976660783886*^9}, {
+  3.902976690909082*^9, 3.902976723355782*^9}},
+ FontWeight->"Plain",
+ CellID->238159395,ExpressionUUID->"69eea6e8-f7f8-4b4c-9ceb-22e28275b05f"],
+
+Cell["\<\
+Late submission - after 17:00:   1 mark penalty for every 24 hrs  \
+\>", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.9029767396067343`*^9, 3.90297678052064*^9}, {
+  3.9029768198512697`*^9, 3.902976840962482*^9}, {3.902976870976409*^9, 
+  3.9029769454764547`*^9}, {3.902977046983265*^9, 3.9029770916454897`*^9}},
+ FontWeight->"Plain",
+ CellID->841467016,ExpressionUUID->"9097e1c7-d548-4f9f-8f9f-16795189378e"],
+
+Cell["Late submission - 48 hrs after 17:00: 10-11   ", "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.902976845889894*^9, 3.902976916854065*^9}, {
+  3.902976951212356*^9, 3.9029769713949757`*^9}, {3.90297708094212*^9, 
+  3.902977084374057*^9}},
+ FontWeight->"Plain",
+ CellID->745244165,ExpressionUUID->"49797c32-4472-4c32-a161-9339ea83f9a2"]
+},
+WindowSize->{1294, 768},
+WindowMargins->{{Automatic, 58}, {-7, Automatic}},
+TaggingRules-><|"$testsRun" -> False|>,
+FrontEndVersion->"13.2 for Mac OS X x86 (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> 
+     FrontEnd`FileName[{"MUnit"}, "MUnit.nb", CharacterEncoding -> 
+       "UTF-8"]]]}, Visible -> False, FrontEndVersion -> 
+  "13.2 for Mac OS X x86 (64-bit) (January 30, 2023)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"],
+ExpressionUUID->"cb0e865e-25cc-4e1d-8f9d-9495b0e150b9"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 992, 16, 94, "Text",ExpressionUUID->"22eab519-2e2d-4803-ab8b-1d642d0afd81",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->859383337],
+Cell[1553, 38, 698, 11, 87, "Text",ExpressionUUID->"b0db85e9-3077-4077-b818-6743a0a3822b",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->221336030],
+Cell[2254, 51, 2422, 55, 591, "Text",ExpressionUUID->"d9af3a23-6d40-4e6a-9087-803fc81dffca",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->927572909],
+Cell[4679, 108, 395, 7, 87, "Text",ExpressionUUID->"71b0f282-21b9-4aae-b2c6-c6a978a59f16",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->1052646407],
+Cell[5077, 117, 3808, 93, 897, "Text",ExpressionUUID->"b7738491-1f08-4955-8b76-141e2c5fdc47",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->1909231217],
+Cell[8888, 212, 316, 5, 87, "Text",ExpressionUUID->"0f58d3a9-53d4-475e-a759-97be334f3210",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->1759352527],
+Cell[9207, 219, 659, 12, 222, "Text",ExpressionUUID->"958b103f-6028-4e9a-a7ef-9986e2818e88",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->1320175686],
+Cell[9869, 233, 439, 8, 94, "Text",ExpressionUUID->"17b85abd-b7cb-44e1-bb63-c401883f56b5",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->281704595],
+Cell[10311, 243, 312, 5, 87, "Text",ExpressionUUID->"84acb793-64aa-404b-9b9d-d08146564fb6",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->488358323],
+Cell[10626, 250, 272, 4, 87, "Text",ExpressionUUID->"e9a3bebc-ccb6-44f2-9743-c4c72980514c",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->143665963],
+Cell[10901, 256, 275, 4, 87, "Text",ExpressionUUID->"7649dcdf-f349-47b1-a0e1-2d4161bc41ea",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->641756405],
+Cell[11179, 262, 337, 5, 87, "Text",ExpressionUUID->"69eea6e8-f7f8-4b4c-9ceb-22e28275b05f",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->238159395],
+Cell[11519, 269, 459, 8, 87, "Text",ExpressionUUID->"9097e1c7-d548-4f9f-8f9f-16795189378e",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->841467016],
+Cell[11981, 279, 379, 6, 87, "Text",ExpressionUUID->"49797c32-4472-4c32-a161-9339ea83f9a2",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->745244165]
+}
+]
+*)
+

@@ -1,0 +1,117 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4958,        109]
+NotebookOptionsPosition[      4041,         82]
+NotebookOutlinePosition[      4762,        106]
+CellTagsIndexPosition[      4719,        103]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["Assignment - 09:  Probability distributions and Monte \
+Carlo methods",
+ FontSize->18,
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->{{3.902660294012339*^9, 3.902660340268341*^9}, 
+   3.90266050426537*^9, {3.902661624081382*^9, 3.9026617425226173`*^9}, {
+   3.9026617942672987`*^9, 3.9026618165178328`*^9}, {3.9026618646529512`*^9, 
+   3.9026618717676077`*^9}, {3.9026619479819927`*^9, 3.902662027247834*^9}, {
+   3.9026622898685093`*^9, 3.902662292339713*^9}, 3.902662353316881*^9, {
+   3.902662387102285*^9, 3.9026625871829348`*^9}, {3.902665667582101*^9, 
+   3.902665686253454*^9}, {3.902740190874868*^9, 3.90274019445092*^9}, {
+   3.902961752612314*^9, 3.902961803693766*^9}, {3.902966200929556*^9, 
+   3.9029662092772093`*^9}, {3.904773079215495*^9, 3.904773092368147*^9}, {
+   3.904774338055511*^9, 3.9047743596005707`*^9}, {3.905986142931188*^9, 
+   3.905986149790804*^9}, {3.905986978157054*^9, 3.90598698435811*^9}, 
+   3.905987023963441*^9, {3.906587403206739*^9, 3.906587446809061*^9}, 
+   3.9065904389013643`*^9, {3.906591884683805*^9, 3.906591885747673*^9}, {
+   3.907196300703761*^9, 3.907196318307315*^9}, {3.907196989089651*^9, 
+   3.907196992917597*^9}},
+ FontWeight->"Plain",
+ CellID->859383337,ExpressionUUID->"22eab519-2e2d-4803-ab8b-1d642d0afd81"],
+
+Cell[TextData[{
+ "This assignment concerns with understanding of probability distributions \
+and Monte Carlo Methods.\n\n",
+ StyleBox["Part A: Pseudo random numbers and probability distributions",
+  FontColor->RGBColor[0, 0, 1]],
+ "\n\n1. Choose a pseudo random number generator and generate a large list of \
+random numbers. Find the probability distribution. \n\n2. Choose at least two \
+different distributions, plot the distributions and plot the Histogram with \
+different options. Also, compute the mean, variance, covariance, skewness and \
+kurtosis of the distributions. \n\n3. Choose a distribution other than the \
+normal distribution, perform an \[OpenCurlyDoubleQuote]experiment\
+\[CloseCurlyDoubleQuote] and verify if the central limit theorem is \
+applicable.\n\n",
+ StyleBox["Part B: On applications of probability distributions",
+  FontColor->RGBColor[0, 0, 1]],
+ "\n\n1. Choose a suitable configuration and compute the value of Pi\n\n2. \
+Evaluate a one-dimensional integral of your choice using the Monte Carlo \
+method.\n\n3. Repeat the same for a multidimensional integral.\n\n\n",
+ StyleBox["Part C: Thinking beyond the class work",
+  FontColor->RGBColor[0, 0, 1]],
+ "\n\n1. Comment on your results. \n\n2. Do you think the values of the \
+integral calculated in Q1 (or Q2) of Part B will obey central limit theorem? \
+Substantiate your response. \n\n3. Read about Brownian motion and Random walk \
+and comment."
+}], "Text",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellChangeTimes->CompressedData["
+1:eJwd0D1IAgEABWCRiAgSRM8itdD+Bm1IEMuyOmgSJBOMqKHQwlrUoEFICiN1
+UKOUaCgUqiVJkHJIsKAyA0MxWhyiI6gG4SAyiiCsew6Pjzc9eBKTzTDHZrFY
+QibQ4lPwR/k0aRA7O6DWGO+FjlsbCU9kbl+1K4MhqAkcRKDZRhxWe3RDpGdU
+B0tVs5zR0HUjTcol10kYpnSXMFp4ZKfh8U8ddCz3c+BZ7DTHa6bJPVWths8Y
+uI9Y+oQ0WXSFPXCA/+qH0h1vGpaG2Vn4K76h4IhV+wJT4zGemlHmGGqCxKKh
+BWaujG0wzi2PQSVln4CfOcEUdOnaZ+Bk4GsWlvLyBeixb2agyrmehVLB7h2s
+2U89wNb5chGunfc8w4/p7rfqnjdKw3qC+IZLhYsK3M4k/uAhp5IwiZi/8k8V
+eDSYbDAzrlAJLnz3m7tmGWPEtx52bhWNcFXhtsJ/WaLDYQ==
+  "],
+ FontWeight->"Plain",
+ CellID->927572909,ExpressionUUID->"d9af3a23-6d40-4e6a-9087-803fc81dffca"]
+},
+WindowSize->{1334, 779},
+WindowMargins->{{19, Automatic}, {Automatic, 4}},
+TaggingRules-><|"$testsRun" -> False|>,
+FrontEndVersion->"13.2 for Mac OS X x86 (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> 
+     FrontEnd`FileName[{"MUnit"}, "MUnit.nb", CharacterEncoding -> 
+       "UTF-8"]]]}, Visible -> False, FrontEndVersion -> 
+  "13.2 for Mac OS X x86 (64-bit) (January 30, 2023)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"],
+ExpressionUUID->"72e8d153-bed0-4946-a0fd-3ba965e4d600"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1360, 21, 94, "Text",ExpressionUUID->"22eab519-2e2d-4803-ab8b-1d642d0afd81",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->859383337],
+Cell[1921, 43, 2116, 37, 1482, "Text",ExpressionUUID->"d9af3a23-6d40-4e6a-9087-803fc81dffca",
+ CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+ CellID->927572909]
+}
+]
+*)
+

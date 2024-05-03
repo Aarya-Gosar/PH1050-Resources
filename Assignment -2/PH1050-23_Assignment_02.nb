@@ -1,0 +1,215 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10036,        207]
+NotebookOptionsPosition[      8669,        169]
+NotebookOutlinePosition[      9555,        198]
+CellTagsIndexPosition[      9512,        195]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["Assignment 02: On Iteration, Flow Control and Lists",
+ FontSize->16]], "Title",
+ CellChangeTimes->{{3.9020107257016277`*^9, 3.902010733735392*^9}, {
+  3.902010781647057*^9, 3.9020107871274967`*^9}, {3.902027780438819*^9, 
+  3.9020277844640636`*^9}, {3.9020404945434313`*^9, 3.9020405206561813`*^9}, {
+  3.9020616951504993`*^9, 3.902061699550571*^9}, {3.902061805309976*^9, 
+  3.902061806407403*^9}, {3.902061851205722*^9, 3.902061880853629*^9}, {
+  3.902354488234179*^9, 3.902354502666086*^9}, {3.9023545334659033`*^9, 
+  3.902354534282507*^9}, {3.902360361922228*^9, 3.902360378186433*^9}},
+ FontSize->36,
+ FontTracking->"Plain",
+ CellID->1069326324,ExpressionUUID->"a31b860d-e8cc-4994-82a3-102252e5d78d"],
+
+Cell[TextData[StyleBox["This assignment has two parts: Part one requires \
+knowledge of functions related to iteration and flow control, like \
+\[OpenCurlyDoubleQuote]For\[CloseCurlyDoubleQuote]. Part 2 is on simple \
+numerical integration but requires a bit of analytical thinking. ",
+ FontSize->14,
+ FontColor->GrayLevel[0]]], "CodeText",
+ CellChangeTimes->{{3.9020278844715567`*^9, 3.902027889863978*^9}, {
+   3.902028059688108*^9, 3.902028062319489*^9}, {3.902040523544029*^9, 
+   3.902040524088109*^9}, 3.9020405824160147`*^9, 3.90206175472715*^9, {
+   3.9020618138219147`*^9, 3.902061822941949*^9}, {3.902354681937859*^9, 
+   3.902354853922386*^9}, {3.902355061409164*^9, 3.902355075402586*^9}, {
+   3.9023570313068037`*^9, 3.9023570316747303`*^9}, {3.902360397897354*^9, 
+   3.9023604130107727`*^9}},
+ FontSize->36,
+ CellID->1796469024,ExpressionUUID->"059d757c-1f81-4a72-8c58-8700dfaec0fc"],
+
+Cell[TextData[StyleBox["Part1:\nWrite a code to get the machine epsilon using \
+the flow control function \
+\[OpenCurlyDoubleQuote]While\[CloseCurlyDoubleQuote].  Repeat the same with \
+either \[OpenCurlyDoubleQuote]For\[CloseCurlyDoubleQuote] or \
+\[OpenCurlyDoubleQuote]Do\[CloseCurlyDoubleQuote] loop.  You may wish to \
+include \[OpenCurlyDoubleQuote]If\[CloseCurlyDoubleQuote]and \
+\[OpenCurlyDoubleQuote]Break\[CloseCurlyDoubleQuote]",
+ FontSize->14,
+ FontColor->GrayLevel[0]]], "CodeText",
+ CellChangeTimes->{{3.902354882985924*^9, 3.902354935817461*^9}, {
+  3.902354975872765*^9, 3.902354981482401*^9}, {3.902355018130468*^9, 
+  3.902355111513524*^9}, {3.9023551458579473`*^9, 3.902355146154888*^9}, {
+  3.9023570597224894`*^9, 3.902357067506576*^9}, {3.902357533586823*^9, 
+  3.9023575365707808`*^9}, {3.902360430530024*^9, 3.902360482466576*^9}},
+ FontSize->36,
+ CellID->2022879523,ExpressionUUID->"58b0375f-93f6-4989-ba5d-b57fdb13a6f5"],
+
+Cell[TextData[{
+ StyleBox["Part2:\nConsider the Gaussian function modulated by x^2. \n",
+  FontSize->14,
+  FontColor->GrayLevel[0]],
+ Cell[BoxData[
+  StyleBox[
+   RowBox[{"\[IndentingNewLine]", 
+    RowBox[{"u", "=", " ", 
+     RowBox[{
+      SuperscriptBox["x", "2"], " ", 
+      FractionBox["1", 
+       RowBox[{"\[Sigma]", " ", 
+        SqrtBox[
+         RowBox[{"2", " ", "Pi"}]]}]], 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+        RowBox[{"-", 
+         FractionBox["1", "2"]}], 
+        SuperscriptBox[
+         RowBox[{"(", 
+          FractionBox[
+           RowBox[{"x", "-", "\[Mu]"}], "\[Sigma]"], ")"}], "2"]}]]}]}]}],
+   FontSize->14]],
+  CellGroupingRules->{"GroupTogetherGrouping", 10000.},
+  CellChangeTimes->{{3.902273114548275*^9, 3.902273141208989*^9}, {
+    3.9022732223843603`*^9, 3.902273344176405*^9}, {3.902273377616365*^9, 
+    3.902273405280501*^9}, {3.90227346229987*^9, 3.902273464745944*^9}, 
+    3.902273503137477*^9, {3.9022735515815697`*^9, 3.902273558335231*^9}, {
+    3.902273589621266*^9, 3.9022737638485413`*^9}, {3.902273795581888*^9, 
+    3.902273978007043*^9}, {3.9022740227366037`*^9, 3.902274077224468*^9}, {
+    3.902274112077526*^9, 3.90227419196072*^9}, {3.902276481297163*^9, 
+    3.902276577784472*^9}, {3.902276615832782*^9, 3.902276646832712*^9}, {
+    3.902276842736978*^9, 3.902276845492261*^9}, {3.902279730674542*^9, 
+    3.902279757594922*^9}, {3.90227981224774*^9, 3.90227984596565*^9}, {
+    3.9022800432267103`*^9, 3.90228006196695*^9}, {3.902280800973263*^9, 
+    3.902280804683453*^9}},
+  FontWeight->"Plain",
+  FontColor->GrayLevel[0],ExpressionUUID->
+  "2bdcd369-385a-4012-8b65-f34d9c305f12"],
+ StyleBox["\n\nTaking \[OpenCurlyDoubleQuote]\[Mu] = \
+0\[CloseCurlyDoubleQuote], you need to find the area below the curve for \
+various values of \[OpenCurlyDoubleQuote]\[Sigma]\[CloseCurlyDoubleQuote] \
+ranging from 10^-3 to 10^3. Essentially you need to Integrate \
+\[OpenCurlyDoubleQuote]u\[CloseCurlyDoubleQuote] numerically using the \
+function \[OpenCurlyDoubleQuote]NIntegrate\[CloseCurlyDoubleQuote] over \
+suitable limits. The procedure to be followed is as follows:\n\na) Plot \
+\[OpenCurlyDoubleQuote]u\[CloseCurlyDoubleQuote] for example, with \
+\[OpenCurlyDoubleQuote]\[Sigma] = 100 \[CloseCurlyDoubleQuote] and  \
+\[OpenCurlyDoubleQuote]\[Mu] = 0\[CloseCurlyDoubleQuote] over an interval \
+much \t     larger than \[Sigma] . This will give you a feel of the function.\
+\n\nb) Generate two lists of data for \[OpenCurlyDoubleQuote]\[Sigma]\
+\[CloseCurlyDoubleQuote] in the range (10^-3 to 10^3). The first list should \
+be evenly spaced in a decade: {0.001, 0.002,..., 0.009, 0.01, 0.02,...}.This \
+will have 55 data points.  The second list should be logarithmically linear \
+with about 120 points. \n(This procedure should help you split the large \
+range (0.001 to 1000) into small neat steps.)  \n\nc) Integrate \
+\[OpenCurlyDoubleQuote]u\[CloseCurlyDoubleQuote] with \[OpenCurlyDoubleQuote]\
+\[Mu] = 0\[CloseCurlyDoubleQuote] for the values of  \[OpenCurlyDoubleQuote]\
+\[Sigma]\[CloseCurlyDoubleQuote] given by list one over a suitable interval. \
+Plot the integral value as a function of \[OpenCurlyDoubleQuote]\[Sigma]\
+\[CloseCurlyDoubleQuote]. \n\nd) Repeat the same with the second list of \
+values for \[OpenCurlyDoubleQuote]\[Sigma]\[CloseCurlyDoubleQuote]. \n\ne) \
+See if you can find a relationship between the the integral value (area) and \
+\[OpenCurlyDoubleQuote]\[Sigma]\[CloseCurlyDoubleQuote].\n\nf) If you have \
+time you may want to check your result by using the function \
+\[OpenCurlyDoubleQuote]Plot\[CloseCurlyDoubleQuote]. Note \
+\[OpenCurlyDoubleQuote]Plot\[CloseCurlyDoubleQuote] function has no option \
+for specifying the steps.\n\ng) Comment on your results.    ",
+  FontSize->14,
+  FontColor->GrayLevel[0]]
+}], "CodeText",
+ CellChangeTimes->{{3.902355166913735*^9, 3.9023551863372383`*^9}, {
+  3.902355265978747*^9, 3.9023552992653112`*^9}, {3.902355350691063*^9, 
+  3.902355419362671*^9}, {3.902355501930943*^9, 3.902355671130658*^9}, {
+  3.90235572593886*^9, 3.9023557677627563`*^9}, {3.902355839786202*^9, 
+  3.902356407426955*^9}, {3.902356476186962*^9, 3.902357018282851*^9}, {
+  3.902357078707179*^9, 3.902357081580577*^9}, {3.902357119906795*^9, 
+  3.9023571948748007`*^9}, {3.902358019395234*^9, 3.902358089747465*^9}, {
+  3.9023605561788263`*^9, 3.902360653682727*^9}, {3.90236069262689*^9, 
+  3.90236069700292*^9}},
+ FontSize->36,
+ CellID->1341166781,ExpressionUUID->"9874a5d8-6c3a-4bdd-b868-888e1aea5ae7"],
+
+Cell[TextData[StyleBox["Notes and Hints:\n\nNo manual substitution is \
+allowed.\n\nMachine precision should suffice for the computations. Therefore, \
+do not spend time thinking about the precision. \n\nApart from the functions \
+you have in mind, you may find one or more of the the following  functions \
+useful:\n\[AliasDelimiter]\nSet delayed, Evaluate, ReplaceALl (/.) , \
+NIntegrate, WorkingPrecision, ListLinePlot, ListLogPlot, Plot, LogLogPlot,  \
+While, For, Do, If and Break, RealDigits,  AppendTo, Append, Flatten and \
+Range.",
+ FontSize->14,
+ FontColor->GrayLevel[0]]], "CodeText",
+ CellChangeTimes->{{3.902357290282476*^9, 3.9023575037947483`*^9}, {
+   3.902357553690426*^9, 3.902357559618477*^9}, {3.902357590674737*^9, 
+   3.902357756298737*^9}, {3.902357928134369*^9, 3.9023580815386343`*^9}, 
+   3.902360708802568*^9, 3.90236092970275*^9},
+ FontSize->36,
+ CellID->1279517110,ExpressionUUID->"df6bd849-0659-4bf5-b435-22818cba39e5"]
+}, Closed]]
+},
+CellGrouping->Automatic,
+WindowSize->{1364, 765},
+WindowMargins->{{Automatic, 4}, {-39, Automatic}},
+ShowGroupOpener->{"InsideFrame", "OutsideFrame"},
+WholeCellGroupOpener->True,
+GroupOpenerInsideFrame->True,
+TaggingRules-><|"$testsRun" -> False|>,
+Magnification:>1.25 Inherited,
+FrontEndVersion->"13.2 for Mac OS X x86 (64-bit) (January 30, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> 
+     FrontEnd`FileName[{"MUnit"}, "MUnit.nb", CharacterEncoding -> 
+       "UTF-8"]]]}, Visible -> False, FrontEndVersion -> 
+  "13.2 for Mac OS X x86 (64-bit) (January 30, 2023)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"],
+ExpressionUUID->"0fa821d4-035e-4048-a56c-b5bea53f5583"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 730, 11, 173, "Title",ExpressionUUID->"a31b860d-e8cc-4994-82a3-102252e5d78d",
+ CellID->1069326324],
+Cell[1313, 35, 898, 14, 208, "CodeText",ExpressionUUID->"059d757c-1f81-4a72-8c58-8700dfaec0fc",
+ CellID->1796469024],
+Cell[2214, 51, 947, 15, 256, "CodeText",ExpressionUUID->"58b0375f-93f6-4989-ba5d-b57fdb13a6f5",
+ CellID->2022879523],
+Cell[3164, 68, 4537, 81, 1623, "CodeText",ExpressionUUID->"9874a5d8-6c3a-4bdd-b868-888e1aea5ae7",
+ CellID->1341166781],
+Cell[7704, 151, 949, 15, 683, "CodeText",ExpressionUUID->"df6bd849-0659-4bf5-b435-22818cba39e5",
+ CellID->1279517110]
+}, Closed]]
+}
+]
+*)
+
